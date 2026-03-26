@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NeuroAuto Motors | Автомобили в продаже</title>
+  <link rel="icon" type="image/svg+xml" href="/static/assets/favicon.svg" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="top-nav">
+    <div class="container top-nav-inner">
+      <img src="/static/assets/logo.svg" alt="NeuroAuto logo" height="40" />
+      <nav class="main-menu">
+        <a href="#">Автомобили</a>
+        <a href="#">Сервис</a>
+        <a href="#">Услуги</a>
+        <a href="#">Акции</a>
+        <a href="#">Контакты</a>
+      </nav>
+      <div class="hotline">+7 (495) 123-45-67</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-copy card">
+        <div class="hero-tag">Официальный дилер в Москве</div>
+        <h1>Новые автомобили в наличии</h1>
+        <p>
+          Подбор автомобиля, кредит, трейд-ин и тест-драйв в одном окне.
+          Онлайн-ассистент на базе ИИ отвечает по FAQ и передает заявки в CRM.
+        </p>
+        <div class="stats">
+          <div><strong>3 687</strong><span>Новых авто</span></div>
+          <div><strong>2 222</strong><span>Авто с пробегом</span></div>
+          <div><strong>15 мин</strong><span>SLA менеджера</span></div>
+        </div>
+      </div>
+      <aside class="offer card">
+        <h3>Предложение дня</h3>
+        <p class="offer-title">Toyota RAV4 Prestige</p>
+        <p class="offer-price">от 3 450 000 ₽</p>
+        <p class="muted">Кредит от 6.9%, трейд-ин до 100 000 ₽</p>
+        <button class="cta-btn">Получить предложение</button>
+      </aside>
+    </section>
+
+    <section class="search-block card">
+      <h3>Подбор автомобиля по параметрам</h3>
+      <div class="search-grid">
+        <select>
+          <option>Марка</option>
+          <option>Toyota</option>
+          <option>Geely</option>
+          <option>Chery</option>
+        </select>
+        <select>
+          <option>Модель</option>
+          <option>RAV4</option>
+          <option>Camry</option>
+          <option>Monjaro</option>
+        </select>
+        <select>
+          <option>Тип кузова</option>
+          <option>Кроссовер</option>
+          <option>Седан</option>
+          <option>Внедорожник</option>
+        </select>
+        <select>
+          <option>Бюджет</option>
+          <option>до 2 млн</option>
+          <option>2-4 млн</option>
+          <option>от 4 млн</option>
+        </select>
+      </div>
+      <button class="primary-btn">Показать предложения</button>
+    </section>
+
+    <section class="features">
+      <article class="card">
+        <h3>Почему выбирают нас</h3>
+        <ul>
+          <li>Официальные поставки и прозрачные условия</li>
+          <li>Оценка трейд-ин за 30 минут</li>
+          <li>Кредит и лизинг через банки-партнеры</li>
+          <li>Сервис и гарантийная поддержка</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Контакты (демо)</h3>
+        <p><strong>NeuroAuto Motors</strong></p>
+        <p>+7 (495) 123-45-67</p>
+        <p>sales@neuroauto.example.ru</p>
+        <p>г. Москва, ул. Тестовая, 10</p>
+      </article>
+      <article class="card">
+        <h3>Обработка данных</h3>
+        <p>
+          Нажимая "Отправить", пользователь дает согласие на обработку персональных данных
+          для обратной связи и подбора предложения.
+        </p>
+        <p class="muted small">Перед релизом замените шаблон на вашу официальную политику.</p>
+      </article>
+    </section>
+
+    <footer class="footnote">© 2026 NeuroAuto Motors.</footer>
+  </main>
+
+  <button id="assistant-toggle" class="assistant-fab" aria-label="Открыть чат ассистента">
+    <span class="dot"></span>
+    Онлайн-ассистент
+  </button>
+
+  <aside id="assistant-panel" class="assistant-panel" aria-hidden="true">
+    <div class="assistant-head">
+      <div>
+        <strong>NeuroAuto Assistant</strong>
+        <p>Живой AI-консультант: авто, кредит, тест-драйв</p>
+      </div>
+      <button id="assistant-close" class="icon-btn" aria-label="Закрыть чат">×</button>
+    </div>
+    <div id="quick-actions" class="quick-actions">
+      <button data-prompt="Нужен RAV4 в кредит">RAV4 в кредит</button>
+      <button data-prompt="Хочу оценить авто в трейд-ин">Оценка трейд-ин</button>
+      <button data-prompt="Запишите на тест-драйв">Тест-драйв</button>
+    </div>
+    <div id="chat-log" class="chat-log"></div>
+    <div id="typing" class="typing hidden">Ассистент печатает...</div>
+    <form id="chat-form" class="chat-form">
+      <input id="message" placeholder="Например: нужен RAV4 в кредит" autocomplete="off" />
+      <button type="submit">Отправить</button>
+    </form>
+    <div id="status" class="status-line">Готов к диалогу</div>
+  </aside>
+
+  <div id="overlay" class="overlay"></div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

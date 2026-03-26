@@ -1,0 +1,6 @@
+<svg width="220" height="48" viewBox="0 0 220 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="48" height="48" rx="10" fill="#1D4ED8"/>
+  <path d="M11 30L19 18L24 24L30 16L37 30H33L29.5 24L24 31L19.2 24L15 30H11Z" fill="white"/>
+  <text x="58" y="21" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#0F172A">NeuroAuto</text>
+  <text x="58" y="38" font-family="Arial, sans-serif" font-size="13" fill="#475569">Auto Sales Assistant</text>
+</svg>

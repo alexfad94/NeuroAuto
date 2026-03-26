@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Local secrets and runtime config
+.env
+
+# Local vector DB/runtime data
+data/chroma/
+*.sqlite3
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Build/test runtime artifacts
+*.log
+
+# Generated document packages and exports
+/Документы_NeuroAuto_Пакет/
+/Документы_NeuroAuto_Итоговые_пакеты/
+/Документы_NeuroAuto_Релиз_v1.0_PDF/
+/Документы_NeuroAuto_Пакет.zip
+/Документы_NeuroAuto_Релиз_v1.0_PDF.zip
+
+# Root-level non-code project artifacts
+/BUSINESS_PRESENTATION.md
+/BUSINESS_PRESENTATION_COMPACT.md
+/FAQ_import_ready.txt
+/FAQ_Ассистенты_текстовый.md
+/FAQ_Ассистенты_текстовый.txt
+/UAT_ROUTING_CHECKLIST.md
+/testing.xlsx
+/03_Бизнес_презентация.docx
+/03_Бизнес_презентация.pdf
+
+# Root-level binary office documents
+/*.pdf
+/*.docx
+/*.zip
+
+# Keep project documentation in git
+!README.md

@@ -4,7 +4,7 @@
 | --- | --- |
 | **Owner** | @sales-bot-owner |
 | **Модель** | GigaChat |
-| **Теги** | sales, auto-dealer, RAG, CRM-routing, ru |
+| **Теги** | sales, auto-dealer, RAG, CRM-routing |
 
 ## Цель
 

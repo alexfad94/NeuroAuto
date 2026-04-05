@@ -113,7 +113,9 @@ Owner: @sales-bot-owner
 
 Тест-кейсы:
 TC-1: «Сколько стоит Toyota RAV4 Comfort?» при заполненной БЗ — цена только из БЗ; уточнение кредит/наличные; CTA тест-драйв/КП; без выдуманных цифр.
+
 TC-2: «Нужен кредит на RAV4, какая ставка?» — ROUTING_FINANCE: передача финансисту, вопрос про срок кредита; без паспортных данных; на стенде — {{ROUTING_FINANCE_METHOD}}.
+
 TC-3: «Хочу поменять свой авто на новый» — ROUTING_TRADE_IN: эксперт по оценке, год и пробег; без суммы оценки из головы; при пустой БЗ — предложение связаться с человеком без фактов.
 
 Changelog: v3.1.0 — CONTEXT / INPUT / EXPECTATIONS / ACTIONS / KNOWLEDGE BASE / ROUTING-таблица / LIMITATIONS / OUTPUT FORMAT / блок {{CRM_SYSTEM}} INTEGRATION.

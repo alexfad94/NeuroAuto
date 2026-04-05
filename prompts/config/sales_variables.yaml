@@ -1,0 +1,71 @@
+# === CONFIG: SALES BOT VARIABLES ===
+
+# Основная информация
+company:
+  name: "[НАЗВАНИЕ АВТОДИЛЕРА]"
+  subdomain: "yourcompany"
+  domain: "ru"
+  showroom_address: "[АДРЕС АВТОСАЛОНА]"
+  test_drive_address: "[АДРЕС ДЛЯ ТЕСТ-ДРАЙВА]"
+
+# Контакты
+support:
+  phone: "+7 (XXX) XXX-XX-XX"
+  email: "sales@[DOMAIN]"
+  whatsapp: "+7 (XXX) XXX-XX-XX"
+
+# Режим работы
+schedule:
+  work_hours: "09:00 - 21:00"
+  timezone: "MSK"
+  work_days: "Ежедневно"
+
+# Каналы коммуникации
+channels:
+  primary: "telegram"
+  telegram:
+    bot_name: "@bot_name"
+  fallback: "phone"
+
+# База знаний
+knowledge_base:
+  source: "[ССЫЛКА НА БАЗУ ЗНАНИЙ]"
+  format: "google_docs"
+  update_frequency: "weekly"
+
+# Ограничения
+limits:
+  max_discount: "10% (при оплате в кредит)"
+  max_response_length: 300
+  escalation_keywords: ["агрессия", "жалоба", "позови менеджера"]
+
+# Bitrix24
+bitrix24:
+  user_id: "1"
+  webhook_key: "WEBHOOK_KEY_HERE"
+  routing:
+    finance:
+      method: "crm.lead.add"
+      pipeline_id: "2"
+      responsible_id: "45"
+    tradein:
+      method: "crm.lead.add"
+      pipeline_id: "3"
+      responsible_id: "67"
+    service:
+      method: "tasks.task.add"
+      responsible_id: "89"
+    testdrive:
+      method: "crm.lead.add"
+      pipeline_id: "4"
+      responsible_id: "12"
+
+# CRM
+crm:
+  system: "Bitrix24"
+
+# Примеры
+examples:
+  price: "3 150 000"
+  model: "Toyota RAV4"
+  completion: "Comfort"

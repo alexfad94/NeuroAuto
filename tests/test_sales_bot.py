@@ -4,7 +4,7 @@
 import pytest
 import os
 
-PROMPT_CARD = 'prompts/sales/sales_bot_v3.1_CLEAR_card.txt'
+PROMPT_CARD = 'prompts/sales/sales_bot_v3.1_CLEAR_card.md'
 
 def test_prompt_file_exists():
     """Проверка, что карточка промпта с полным текстом существует"""

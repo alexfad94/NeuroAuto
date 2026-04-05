@@ -20,7 +20,7 @@
 
 ## 🔗 Ссылки
 
-- Промпт (шаблон): prompts/sales/sales_bot_v3.1.txt
+- Промпт (карточка + полный текст): prompts/sales/sales_bot_v3.1_CLEAR_card.txt
 - Конфиг (YAML): prompts/config/sales_variables.yaml
 - База знаний: {{KB_SOURCE}}
 - Документация: docs/prompts/sales_bot_card.md

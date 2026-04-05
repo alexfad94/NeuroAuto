@@ -4,10 +4,12 @@
 import pytest
 import os
 
+PROMPT_CARD = 'prompts/sales/sales_bot_v3.1_CLEAR_card.txt'
+
 def test_prompt_file_exists():
-    """Проверка, что файл промпта существует"""
-    assert os.path.exists('prompts/sales/sales_bot_v3.1.txt'), \
-        "Файл промпта не найден: prompts/sales/sales_bot_v3.1.txt"
+    """Проверка, что карточка промпта с полным текстом существует"""
+    assert os.path.exists(PROMPT_CARD), \
+        f"Файл не найден: {PROMPT_CARD}"
 
 def test_config_file_exists():
     """Проверка, что конфиг существует"""
@@ -21,7 +23,7 @@ def test_card_file_exists():
 
 def test_routing_triggers_present():
     """Проверка, что триггеры маршрутизации есть в промпте"""
-    with open('prompts/sales/sales_bot_v3.1.txt', 'r', encoding='utf-8') as f:
+    with open(PROMPT_CARD, 'r', encoding='utf-8') as f:
         content = f.read()
     
     assert 'ROUTING_FINANCE' in content, "Не найден триггер ROUTING_FINANCE"
@@ -31,7 +33,7 @@ def test_routing_triggers_present():
 
 def test_variables_in_prompt():
     """Проверка, что переменные {{VARIABLES}} есть в промпте"""
-    with open('prompts/sales/sales_bot_v3.1.txt', 'r', encoding='utf-8') as f:
+    with open(PROMPT_CARD, 'r', encoding='utf-8') as f:
         content = f.read()
     
     required_variables = [
@@ -54,7 +56,7 @@ def test_variables_in_prompt():
 
 def test_limitations_section():
     """Проверка, что раздел ограничений на месте"""
-    with open('prompts/sales/sales_bot_v3.1.txt', 'r', encoding='utf-8') as f:
+    with open(PROMPT_CARD, 'r', encoding='utf-8') as f:
         content = f.read()
     
     assert 'LIMITATIONS' in content, "Не найден раздел LIMITATIONS"
@@ -86,7 +88,7 @@ def test_yaml_config_structure():
 
 def test_prompt_length():
     """Проверка, что промпт не слишком короткий"""
-    with open('prompts/sales/sales_bot_v3.1.txt', 'r', encoding='utf-8') as f:
+    with open(PROMPT_CARD, 'r', encoding='utf-8') as f:
         content = f.read()
     
     lines = content.strip().split('\n')
@@ -94,7 +96,7 @@ def test_prompt_length():
 
 def test_context_section():
     """Проверка раздела CONTEXT"""
-    with open('prompts/sales/sales_bot_v3.1.txt', 'r', encoding='utf-8') as f:
+    with open(PROMPT_CARD, 'r', encoding='utf-8') as f:
         content = f.read()
     
     assert 'CONTEXT' in content, "Не найден раздел CONTEXT"
@@ -104,7 +106,7 @@ def test_context_section():
 
 def test_output_format_section():
     """Проверка раздела OUTPUT FORMAT"""
-    with open('prompts/sales/sales_bot_v3.1.txt', 'r', encoding='utf-8') as f:
+    with open(PROMPT_CARD, 'r', encoding='utf-8') as f:
         content = f.read()
     
     assert 'OUTPUT FORMAT' in content or 'OUTPUT' in content, \
